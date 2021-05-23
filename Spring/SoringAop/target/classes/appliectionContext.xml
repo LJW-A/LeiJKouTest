@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--切点-->
+    <bean id="target" class="AOP.Target"></bean>
+
+    <!--切面-->
+    <bean id="myAspect" class="AOP.MyAspect"></bean>
+
+    <!--声明织入-->
+    <aop:config>
+        <!--声明切面-->
+        <aop:aspect ref="myAspect">
+            <!--切面: 切点+通知-->
+            <aop:before method="befoer" pointcut="execution(void AOP.Target.save())"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>

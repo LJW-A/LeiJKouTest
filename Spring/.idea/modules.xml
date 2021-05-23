@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SoringAop/SoringAop.iml" filepath="$PROJECT_DIR$/SoringAop/SoringAop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringAA.iml" filepath="$PROJECT_DIR$/.idea/SpringAA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAnno/SpringAnno.iml" filepath="$PROJECT_DIR$/SpringAnno/SpringAnno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTemplate/SpringTemplate.iml" filepath="$PROJECT_DIR$/SpringTemplate/SpringTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sprinttest/Sprinttest.iml" filepath="$PROJECT_DIR$/Sprinttest/Sprinttest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LeiJKou:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>LeiJKou</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="LeiJKou-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="LeiJKou:war exploded" />
+    </root>
+  </artifact>
+</component>

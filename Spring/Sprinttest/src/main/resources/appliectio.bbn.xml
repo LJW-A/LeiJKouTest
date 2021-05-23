@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="userrdao" class="dao.dome.Userdaotyest"  init-method="save1" destroy-method="save2"></bean>-->
+   <!-- <bean id="userrdao" class="dao.pactory.staticfactory" factory-method="getuserdao" ></bean>-->
+   <!-- 创建这个工厂类的Bena对象 给里面的set方法设置一个值 前提是必须有set方法-->
+    <bean id="factory" class="dao.pactory.dyfactory">
+        <!--属性得到配置-->
+        <property name="age" value="12"/>
+        <property name="name" value="lllll"/>
+        <!--集合得到配置-->
+        <property name="list">
+            <list>
+                <value>lirj</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="khu" value-ref="yuyu"></entry>
+            </map>
+        </property>
+    </bean>
+    <bean id="yuyu" class="dao.pactory.dyfactory"/>
+    <!--指定这个工厂类的id 并获取这类工厂类里面的方法-->
+    <!--<bean id="userrdao" factory-bean="factory" factory-method="getuserdao"/>-->
+
+    <!--p命名空间  需要结合 xmlns:p="http://www.springframework.org/schema/p" 在上面-->
+    <!--<bean id="userrdao" class="dao.pactory.dyfactory" p:userSaverr="factory"/>-->
+</beans>
